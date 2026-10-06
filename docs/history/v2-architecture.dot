@@ -1,0 +1,81 @@
+digraph CampusConnect {
+  graph [rankdir=TB, bgcolor="white", pad="0.25", nodesep="0.35", ranksep="0.6", fontname="Arial", labelloc="t", label="CampusConnect V2 — Application Architecture", fontsize=22];
+  node [shape=box, style="rounded,filled", fillcolor="#F8FAFC", color="#334155", fontname="Arial", fontsize=10, margin="0.16,0.10"];
+  edge [color="#64748B", penwidth=1.15, arrowsize=0.7, fontname="Arial", fontsize=8];
+
+  subgraph cluster_clients {
+    label="1. Client Layer"; color="#93C5FD"; style="rounded"; fontname="Arial"; fontsize=14;
+    users [label="Students / Staff / Supervisors / Admins", fillcolor="#EFF6FF", color="#2563EB"];
+    web [label="React + TypeScript + Vite\nfrontend/src/main.tsx", fillcolor="#F5F3FF", color="#7C3AED"];
+    users -> web [label="browser"];
+  }
+
+  subgraph cluster_api {
+    label="2. API & Access Layer — Node.js 22 + Express"; color="#94A3B8"; style="rounded"; fontname="Arial"; fontsize=14;
+    api [label="Versioned REST API\n/api/v2/*\n+ legacy /api/* compatibility routes"];
+    auth [label="Authentication & Authorization\nBearer session token · role/department enforcement"];
+    socket [label="Socket.IO\nauthenticated real-time connection"];
+    web -> api [label="REST / JSON"];
+    web -> socket [label="Socket.IO"];
+    api -> auth [label="protected V2 routes"];
+  }
+
+  subgraph cluster_domain {
+    label="3. Domain & Application Modules"; color="#CBD5E1"; style="rounded"; fontname="Arial"; fontsize=14;
+    inc [label="Incidents\ncreate · triage · assign · start · resolve\nclose · reopen · escalate · handoff"];
+    res [label="Resources & Bookings\nrooms · equipment · conflict detection"];
+    dash [label="Dashboard & Analytics\nKPIs · department load · reports"];
+    notif [label="Notifications\nin-app + channel abstraction"];
+    ai [label="AI Operations\ntriage · duplicate detection · recommendations"];
+    arch [label="Architecture Observatory\n23 patterns · execution traces"];
+    audit [label="Audit\nimmutable before/after records"];
+  }
+
+  auth -> inc; auth -> res; auth -> dash; auth -> notif; auth -> arch; auth -> audit;
+  inc -> ai [label="incident analysis"];
+
+  subgraph cluster_patterns {
+    label="4. GoF Pattern Library — 23 Implementations"; color="#F59E0B"; style="rounded"; fontname="Arial"; fontsize=14;
+    creational [label="Creational (5)\nSingleton · Abstract Factory · Factory Method\nBuilder · Prototype", fillcolor="#FFFBEB", color="#D97706"];
+    structural [label="Structural (7)\nAdapter · Bridge · Composite · Decorator · Facade\nFlyweight · Proxy", fillcolor="#FFFBEB", color="#D97706"];
+    behavioral [label="Behavioral (11)\nChain of Responsibility · Command · Interpreter · Iterator\nMediator · Memento · Observer · State · Strategy\nTemplate Method · Visitor", fillcolor="#FFFBEB", color="#D97706"];
+    creational -> structural [style=invis]; structural -> behavioral [style=invis];
+  }
+
+  inc -> creational [label="object creation"];
+  inc -> structural [label="orchestration / access"];
+  inc -> behavioral [label="workflow / lifecycle"];
+  res -> creational [label="booking construction"];
+  res -> structural [label="shared equipment"];
+  dash -> behavioral [label="analytics visitors"];
+  notif -> structural [label="Bridge"];
+
+  subgraph cluster_infra {
+    label="5. Infrastructure & Persistence"; color="#86EFAC"; style="rounded"; fontname="Arial"; fontsize=14;
+    repo [label="Repositories\nIncidentRepository · ResourceRepository\nrow ↔ domain mapping"];
+    bus [label="In-process EventBus\nObserver-style domain events"];
+    tracer [label="Pattern Tracer\ntraceId · ordered pattern/component steps"];
+    realtime [label="Real-time Bridge\nEventBus → Socket.IO"];
+    sqlite [shape=cylinder, label="SQLite\ndata/campusconnect.db\nincidents · events · bookings\ncommands · audit · notifications\nAI analyses · pattern traces", fillcolor="#F1F5F9", color="#475569"];
+  }
+
+  inc -> repo; res -> repo; repo -> sqlite;
+  inc -> bus [label="incident.created / updated"];
+  res -> bus [label="booking.created"];
+  notif -> bus [label="notification.created"];
+  audit -> bus [label="audit.created"];
+  bus -> notif [label="observer"];
+  bus -> realtime [label="subscriber"];
+  realtime -> socket [label="live events"];
+  inc -> tracer [label="pattern entry/exit"];
+  res -> tracer;
+  tracer -> sqlite;
+  arch -> tracer [label="reads traces"];
+
+  claude [label="Optional Claude API\nANTHROPIC_API_KEY", fillcolor="#FDF4FF", color="#A21CAF"];
+  ai -> claude [label="optional provider"];
+
+  {rank=same; api; auth; socket}
+  {rank=same; inc; res; dash; notif; ai; arch; audit}
+  {rank=same; repo; bus; tracer; realtime; sqlite; claude}
+}

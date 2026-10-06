@@ -1,0 +1,302 @@
+[
+ {
+  "text": "Light fixture flickering in the corridor and buzzing noise",
+  "category": "Maintenance",
+  "subCategory": "Electrical"
+ },
+ {
+  "text": "Power socket sparking near the whiteboard in the lab",
+  "category": "Maintenance",
+  "subCategory": "Electrical"
+ },
+ {
+  "text": "Switch board burning smell and wires exposed",
+  "category": "Maintenance",
+  "subCategory": "Electrical"
+ },
+ {
+  "text": "No power in the classroom, circuit breaker keeps tripping",
+  "category": "Maintenance",
+  "subCategory": "Electrical"
+ },
+ {
+  "text": "Tube lights not working in the library reading hall",
+  "category": "Maintenance",
+  "subCategory": "Electrical"
+ },
+ {
+  "text": "Ceiling fan making loud noise and wobbling dangerously",
+  "category": "Maintenance",
+  "subCategory": "Electrical"
+ },
+ {
+  "text": "Air conditioner is on but blowing warm air",
+  "category": "Maintenance",
+  "subCategory": "Electrical"
+ },
+ {
+  "text": "Electric shock received from the water cooler",
+  "category": "Maintenance",
+  "subCategory": "Electrical"
+ },
+ {
+  "text": "Wiring hanging from the ceiling in hostel block",
+  "category": "Maintenance",
+  "subCategory": "Electrical"
+ },
+ {
+  "text": "Projector power outlet loose and electricity cutting off",
+  "category": "Maintenance",
+  "subCategory": "Electrical"
+ },
+ {
+  "text": "Street lamp near the parking is not glowing at night",
+  "category": "Maintenance",
+  "subCategory": "Electrical"
+ },
+ {
+  "text": "Whole floor blackout, lights and sockets are dead",
+  "category": "Maintenance",
+  "subCategory": "Electrical"
+ },
+ {
+  "text": "Water leaking from the ceiling above the desks",
+  "category": "Maintenance",
+  "subCategory": "Plumbing"
+ },
+ {
+  "text": "Toilet is clogged and overflowing in the second floor washroom",
+  "category": "Maintenance",
+  "subCategory": "Plumbing"
+ },
+ {
+  "text": "Tap is dripping continuously in the pantry sink",
+  "category": "Maintenance",
+  "subCategory": "Plumbing"
+ },
+ {
+  "text": "Burst pipe flooding the corridor near the lab",
+  "category": "Maintenance",
+  "subCategory": "Plumbing"
+ },
+ {
+  "text": "Drain blocked and dirty water collecting outside the canteen",
+  "category": "Maintenance",
+  "subCategory": "Plumbing"
+ },
+ {
+  "text": "No water supply in the boys hostel washroom",
+  "category": "Maintenance",
+  "subCategory": "Plumbing"
+ },
+ {
+  "text": "Water cooler leaking onto the floor",
+  "category": "Maintenance",
+  "subCategory": "Plumbing"
+ },
+ {
+  "text": "Sewage smell coming from the bathroom drain",
+  "category": "Maintenance",
+  "subCategory": "Plumbing"
+ },
+ {
+  "text": "Flush not working and the cistern keeps running",
+  "category": "Maintenance",
+  "subCategory": "Plumbing"
+ },
+ {
+  "text": "Low water pressure in all the taps of the block",
+  "category": "Maintenance",
+  "subCategory": "Plumbing"
+ },
+ {
+  "text": "Wash basin broken and water spraying everywhere",
+  "category": "Maintenance",
+  "subCategory": "Plumbing"
+ },
+ {
+  "text": "Rainwater seeping through the wall into the classroom",
+  "category": "Maintenance",
+  "subCategory": "Plumbing"
+ },
+ {
+  "text": "Wifi is down in the entire block, no internet connection",
+  "category": "Maintenance",
+  "subCategory": "IT"
+ },
+ {
+  "text": "Projector not turning on in the seminar hall",
+  "category": "Maintenance",
+  "subCategory": "IT"
+ },
+ {
+  "text": "Lab computers are not booting and show a blue screen",
+  "category": "Maintenance",
+  "subCategory": "IT"
+ },
+ {
+  "text": "Cannot log in to the campus portal, password reset failing",
+  "category": "Maintenance",
+  "subCategory": "IT"
+ },
+ {
+  "text": "Printer in the library is jammed and offline",
+  "category": "Maintenance",
+  "subCategory": "IT"
+ },
+ {
+  "text": "Network is very slow and keeps disconnecting during lectures",
+  "category": "Maintenance",
+  "subCategory": "IT"
+ },
+ {
+  "text": "Server room network switch is down and services unreachable",
+  "category": "Maintenance",
+  "subCategory": "IT"
+ },
+ {
+  "text": "Smart board touch screen is unresponsive",
+  "category": "Maintenance",
+  "subCategory": "IT"
+ },
+ {
+  "text": "Software licence expired on the design lab machines",
+  "category": "Maintenance",
+  "subCategory": "IT"
+ },
+ {
+  "text": "Email and shared drive not accessible from the department",
+  "category": "Maintenance",
+  "subCategory": "IT"
+ },
+ {
+  "text": "Microphone and speaker system not working in the auditorium",
+  "category": "Maintenance",
+  "subCategory": "IT"
+ },
+ {
+  "text": "Laptop charging trolley and projector cable missing in room",
+  "category": "Maintenance",
+  "subCategory": "IT"
+ },
+ {
+  "text": "Suspicious person loitering near the girls hostel gate",
+  "category": "Safety",
+  "subCategory": "Security"
+ },
+ {
+  "text": "Bike stolen from the parking area last night",
+  "category": "Safety",
+  "subCategory": "Security"
+ },
+ {
+  "text": "Two students fighting near the cafeteria",
+  "category": "Safety",
+  "subCategory": "Security"
+ },
+ {
+  "text": "Fire alarm sounding and smoke seen from the lab",
+  "category": "Safety",
+  "subCategory": "Security"
+ },
+ {
+  "text": "Harassment reported by a student near the bus stop",
+  "category": "Safety",
+  "subCategory": "Security"
+ },
+ {
+  "text": "Unauthorised entry through the back gate after hours",
+  "category": "Safety",
+  "subCategory": "Security"
+ },
+ {
+  "text": "Broken window lock and door left open in the admin office",
+  "category": "Safety",
+  "subCategory": "Security"
+ },
+ {
+  "text": "Unsafe wet floor and exposed edge, someone slipped and got injured",
+  "category": "Safety",
+  "subCategory": "Security"
+ },
+ {
+  "text": "Stray dogs attacking people near the main gate",
+  "category": "Safety",
+  "subCategory": "Security"
+ },
+ {
+  "text": "Theft of laptop from the unattended classroom",
+  "category": "Safety",
+  "subCategory": "Security"
+ },
+ {
+  "text": "Emergency exit blocked by furniture in the auditorium",
+  "category": "Safety",
+  "subCategory": "Security"
+ },
+ {
+  "text": "CCTV camera not working in the parking lot",
+  "category": "Safety",
+  "subCategory": "Security"
+ },
+ {
+  "text": "Lost a blue backpack near the cafeteria",
+  "category": "LostFound",
+  "subCategory": "General"
+ },
+ {
+  "text": "Found a set of keys on a bench outside the library",
+  "category": "LostFound",
+  "subCategory": "General"
+ },
+ {
+  "text": "Left my water bottle in the seminar hall yesterday",
+  "category": "LostFound",
+  "subCategory": "General"
+ },
+ {
+  "text": "Missing wallet with student ID card, last seen in the lab",
+  "category": "LostFound",
+  "subCategory": "General"
+ },
+ {
+  "text": "Found a black umbrella in the lecture room",
+  "category": "LostFound",
+  "subCategory": "General"
+ },
+ {
+  "text": "Lost my calculator after the exam, brand Casio",
+  "category": "LostFound",
+  "subCategory": "General"
+ },
+ {
+  "text": "Misplaced a notebook and charger in the common room",
+  "category": "LostFound",
+  "subCategory": "General"
+ },
+ {
+  "text": "Found earphones near the sports ground",
+  "category": "LostFound",
+  "subCategory": "General"
+ },
+ {
+  "text": "Dropped my ID card somewhere between the library and canteen",
+  "category": "LostFound",
+  "subCategory": "General"
+ },
+ {
+  "text": "Someone left a laptop bag in the bus",
+  "category": "LostFound",
+  "subCategory": "General"
+ },
+ {
+  "text": "Lost silver ring in the washroom",
+  "category": "LostFound",
+  "subCategory": "General"
+ },
+ {
+  "text": "Found a jacket with a phone in the pocket",
+  "category": "LostFound",
+  "subCategory": "General"
+ }
+]

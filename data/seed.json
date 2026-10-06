@@ -1,0 +1,42 @@
+{
+  "campus": {
+    "name": "Vellore Central Campus",
+    "buildings": [
+      {
+        "name": "Main Block",
+        "floors": [
+          { "name": "Floor 1", "rooms": ["MB-101", "MB-102", "MB-103"] },
+          { "name": "Floor 2", "rooms": ["MB-201", "MB-202"] }
+        ]
+      },
+      {
+        "name": "Tech Tower",
+        "floors": [
+          { "name": "Floor 1", "rooms": ["TT-101", "TT-102"] },
+          { "name": "Floor 3", "rooms": ["TT-301", "TT-302", "TT-303"] }
+        ]
+      },
+      {
+        "name": "Hostel Block C",
+        "floors": [
+          { "name": "Floor 1", "rooms": ["HC-101", "HC-102"] },
+          { "name": "Floor 2", "rooms": ["HC-201", "HC-202"] }
+        ]
+      }
+    ]
+  },
+  "equipment": [
+    { "id": "eq-projector", "name": "Projector", "type": "AV" },
+    { "id": "eq-mic", "name": "Wireless Mic", "type": "AV" },
+    { "id": "eq-whiteboard", "name": "Whiteboard", "type": "General" },
+    { "id": "eq-ac", "name": "Air Conditioner", "type": "Climate" }
+  ],
+  "staff": [
+    { "id": "u-101", "name": "Ramesh Kumar", "role": "Maintenance", "department": "Maintenance" },
+    { "id": "u-102", "name": "Priya Singh", "role": "Supervisor", "department": "Maintenance" },
+    { "id": "u-103", "name": "Dr. Anand Rao", "role": "FacilitiesHead", "department": "Facilities" },
+    { "id": "u-201", "name": "Officer Vikram", "role": "Security", "department": "Security" },
+    { "id": "u-202", "name": "Chief Meena Nair", "role": "SecurityHead", "department": "Security" },
+    { "id": "u-301", "name": "IT Support Arjun", "role": "IT", "department": "IT" }
+  ]
+}

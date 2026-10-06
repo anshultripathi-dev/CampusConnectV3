@@ -1,0 +1,25 @@
+# CampusConnect V3 — single-container deployment.
+#   cp .env.example .env   # optional settings
+#   docker compose up -d --build
+services:
+  campusconnect:
+    build: .
+    image: campusconnect:3.0.0
+    container_name: campusconnect
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3000}:3000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      # Put the app behind your own HTTPS proxy and uncomment:
+      # TRUST_PROXY: "1"
+      # CORS_ORIGINS: "https://campus.example.edu"
+    volumes:
+      - campusconnect-data:/data
+
+volumes:
+  campusconnect-data:

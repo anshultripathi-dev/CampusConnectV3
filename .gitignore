@@ -1,0 +1,11 @@
+node_modules/
+frontend/dist/
+frontend/tsconfig.tsbuildinfo
+.env
+data/campusconnect.db
+data/*.db-shm
+data/*.db-wal
+data/uploads/
+.DS_Store
+coverage/
+data/backups/
