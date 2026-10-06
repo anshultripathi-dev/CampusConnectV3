@@ -1,0 +1,45 @@
+name: Bug report
+description: Something is broken or behaves unexpectedly
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+    validations: { required: true }
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Sign in as …
+        2. Go to …
+        3. Click …
+    validations: { required: true }
+  - type: dropdown
+    id: role
+    attributes:
+      label: Role you were using
+      options: [Student, Maintenance, Security, IT, Supervisor, Facilities Head, Security Head, Admin, Not applicable]
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: From `GET /api/health` or `package.json`.
+      placeholder: 3.0.0
+  - type: dropdown
+    id: runtime
+    attributes:
+      label: How are you running it?
+      options: [npm start, Docker, Docker Compose, Other]
+  - type: input
+    id: env
+    attributes:
+      label: Node.js version / browser
+      placeholder: Node 22.12, Chrome 130
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Server output and browser console errors help a lot. Remove anything sensitive.

@@ -1,0 +1,12 @@
+const express=require('express');
+const auth=require('./auth');
+const rateLimit=require('./rateLimit');
+const router=express.Router();
+const loginLimiter=rateLimit({max:10,message:'Too many sign-in attempts. Please wait a few minutes and try again.'});
+router.post('/login',loginLimiter,(req,res)=>{const {login,password}=req.body||{};const result=auth.login(String(login||''),String(password||''));if(!result)return res.status(401).json({error:'Invalid credentials'});res.json(result);});
+router.get('/config',(req,res)=>res.json({googleClientId:auth.googleEnabled()?auth.GOOGLE_CLIENT_ID:null,demoMode:auth.DEMO_MODE}));
+router.post('/google',loginLimiter,async(req,res)=>{try{res.json(await auth.loginWithGoogle(String(req.body?.credential||'')));}catch(e){res.status(e.status||500).json({error:e.status?e.message:'Google sign-in failed'});}});
+router.get('/me',auth.requireAuth,(req,res)=>res.json({user:req.user}));
+router.post('/logout',auth.requireAuth,(req,res)=>{auth.logout(req.authToken);res.json({success:true});});
+router.get('/demo-users',(req,res)=>{if(!auth.DEMO_MODE)return res.status(404).json({error:'Not found'});res.json({password:auth.DEMO_PASSWORD,users:['student@campusconnect.local','u-101','u-102','u-103','u-201','u-202','u-301']});});
+module.exports=router;
