@@ -130,7 +130,7 @@ sequenceDiagram
     B->>IO: emit to management, department, reporter rooms
     S-->>A: ticket + traceId
     A-->>W: 201
-    W-->>U: confirmation; photos uploaded afterwards
+    W-->>U: confirmation, then photos are uploaded
 ```
 
 The **Architecture Observatory** page lists the real pattern trace of each operation (`pattern_traces`).
