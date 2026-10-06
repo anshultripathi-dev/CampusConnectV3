@@ -1,0 +1,51 @@
+{
+  "name": "campusconnect",
+  "version": "3.0.0",
+  "description": "CampusConnect V3 \u2014 campus operations platform: incidents, room bookings with approvals, real-time updates and offline AI, built around the 23 GoF design patterns",
+  "main": "server.js",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test \"tests/**/*.test.js\"",
+    "smoke": "node scripts/smoke-v2.js",
+    "web:install": "npm --prefix frontend install",
+    "web:dev": "npm --prefix frontend run dev",
+    "web:build": "npm --prefix frontend run build",
+    "web:format": "npm --prefix frontend run format",
+    "build": "npm run web:build",
+    "check": "npm test && npm run smoke && npm run build"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "google-auth-library": "^11.1.0",
+    "socket.io": "^4.8.1"
+  },
+  "license": "MIT",
+  "author": "Anshul Tripathi <anshul.tripathi.dev@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anshultripathi-dev/CampusConnectV3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anshultripathi-dev/CampusConnectV3/issues"
+  },
+  "homepage": "https://github.com/anshultripathi-dev/CampusConnectV3#readme",
+  "keywords": [
+    "campus",
+    "incident-management",
+    "room-booking",
+    "design-patterns",
+    "gof",
+    "express",
+    "react",
+    "sqlite",
+    "socket.io",
+    "offline-ai"
+  ],
+  "private": true
+}
